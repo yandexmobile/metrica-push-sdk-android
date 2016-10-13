@@ -1,0 +1,1 @@
+Yandex.AppMetrica Push Sample
