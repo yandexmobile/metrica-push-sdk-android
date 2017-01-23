@@ -14,12 +14,22 @@ import com.yandex.metrica.push.YandexMetricaPush;
  */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * You can detect opening default launcher application activity via AppMetrica Push notification using
+     * {@link Intent} action.
+     * If you don't define deeplink or uri as push notification, default launcher activity will be opened with
+     * action defined in {@link YandexMetricaPush#OPEN_DEFAULT_ACTIVITY_ACTION}
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        handlePayload(getIntent());
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        if (YandexMetricaPush.OPEN_DEFAULT_ACTIVITY_ACTION.equals(action)) {
+            //It's push from AppMetrica Push SDK. Got it.
+            handlePayload(getIntent());
+        }
     }
 
     /**
