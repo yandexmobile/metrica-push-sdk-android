@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.push.YandexMetricaPush;
 
 /**
@@ -26,6 +27,10 @@ public class SecretActivity extends AppCompatActivity {
 
         mTvDeeplink = (TextView) findViewById(R.id.tv_deeplink);
 
+        if (savedInstanceState != null) {
+            YandexMetrica.reportAppOpen(this);
+        }
+
         Intent intent = getIntent();
 
         handleDeeplink(intent);
@@ -39,6 +44,7 @@ public class SecretActivity extends AppCompatActivity {
         Uri uri = intent.getData();
         if (uri != null && !TextUtils.isEmpty(uri.getHost())) {
             mTvDeeplink.append(String.format("\nDeeplink host: %s", uri.getHost()));
+            YandexMetrica.reportEvent("Open deeplink");
         }
     }
 
@@ -51,6 +57,27 @@ public class SecretActivity extends AppCompatActivity {
         String payload = intent.getStringExtra(YandexMetricaPush.EXTRA_PAYLOAD);
         if (!TextUtils.isEmpty(payload)) {
             mTvDeeplink.append(String.format("\nPayload: %s", payload));
+            YandexMetrica.reportEvent("Handle payload");
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        YandexMetrica.reportAppOpen(this);
+        handleDeeplink(intent);
+        handlePayload(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        YandexMetrica.onResumeActivity(this);
+    }
+
+    @Override
+    protected void onPause() {
+        YandexMetrica.onPauseActivity(this);
+        super.onPause();
     }
 }

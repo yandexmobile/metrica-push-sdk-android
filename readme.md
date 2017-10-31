@@ -14,7 +14,7 @@ Download
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:0.5.0'
+compile 'com.yandex.android:mobmetricapushlib:0.6.0'
 ```
 
 Documentation
@@ -42,7 +42,7 @@ License agreement on use of Yandex.AppMetrica SDK is available at: [http://legal
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:0.5.0'
+compile 'com.yandex.android:mobmetricapushlib:0.6.0'
 ```
 
 Документация

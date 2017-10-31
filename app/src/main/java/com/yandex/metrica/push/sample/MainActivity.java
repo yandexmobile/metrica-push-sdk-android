@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.TextView;
 
+import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.push.YandexMetricaPush;
 
 /**
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(payload)) {
             TextView tvPayload = (TextView) findViewById(R.id.tv_payload);
             tvPayload.setText(payload);
+            YandexMetrica.reportEvent("Handle payload");
         }
     }
 
@@ -48,5 +50,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onNewIntent(final Intent intent) {
         super.onNewIntent(intent);
         handlePayload(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        YandexMetrica.onResumeActivity(this);
+    }
+
+    @Override
+    protected void onPause() {
+        YandexMetrica.onPauseActivity(this);
+        super.onPause();
     }
 }
