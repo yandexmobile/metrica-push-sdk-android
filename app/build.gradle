@@ -23,7 +23,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
 
     compile 'com.yandex.android:mobmetricalib:2.77'  //mobmetricapushlib requires >= 2.51 versions
-    compile 'com.yandex.android:mobmetricapushlib:0.6.0'
+    compile 'com.yandex.android:mobmetricapushlib:0.6.1'
 
     //play services required for push transport
     compile "com.google.android.gms:play-services-gcm:9.4.0"
