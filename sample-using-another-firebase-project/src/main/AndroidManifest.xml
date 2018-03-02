@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.yandex.metrica.push.sample"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".App"
+        android:theme="@style/AppTheme">
+
+        <!-- Replace APP_ID and SENDER_ID with your IDs. Please, read official documentation how to obtain one:
+             https://tech.yandex.com/appmetrica/doc/mobile-sdk-dg/push/android-initialize-docpage/ -->
+        <meta-data android:name="ymp_firebase_app_id" android:value="APP_ID" />
+        <meta-data android:name="ymp_gcm_sender_id" android:value="number:SENDER_ID" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SecretActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="yandexpush" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".SilentPushReceiver"
+                  android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.action.SILENT_PUSH_RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".FirebaseMessagingMasterService">
+            <intent-filter
+                android:priority="500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.yandex.metrica.push.firebase.MetricaMessagingService" tools:node="remove" />
+
+    </application>
+
+</manifest>
