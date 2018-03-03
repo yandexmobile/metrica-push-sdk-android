@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppMetrica Push Sample</string>
+    <string name="activity_main_label_hello">Hello YandexMetricaPush!</string>
+    <string name="activity_secret_label_hello">Hello, secret screen</string>
+</resources>
