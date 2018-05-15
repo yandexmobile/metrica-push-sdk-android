@@ -3,7 +3,7 @@ Yandex.AppMetrica Push Sample
 
 Usage example of **Yandex AppMetrica Push library for Android**.
 
-Requires adding and initializing of [Yandex AppMetrica SDK][1] library with minimal 2.51 version for correct work.
+Requires adding and initializing of [Yandex AppMetrica SDK][1] library with minimal 3.0.0 version for correct work.
 
 To start:
   * Register app in [Firebase](https://console.firebase.google.com)
@@ -14,7 +14,7 @@ Download
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:1.0.0'
+compile 'com.yandex.android:mobmetricapushlib:1.1.0'
 ```
 
 Documentation
@@ -31,7 +31,7 @@ License agreement on use of Yandex.AppMetrica SDK is available at: [https://yand
 
 Пример использования библиотеки **Yandex.AppMetrica Push** для Android
 
-Перед подключением библиотеки необходимо подключить и инициализировать библиотеку [Yandex AppMetrica SDK][1] версией не ниже 2.51
+Перед подключением библиотеки необходимо подключить и инициализировать библиотеку [Yandex AppMetrica SDK][1] версией не ниже 3.0.0
 
 Для запуска:
   * Зарегистрируйте приложение в [Firebase](https://console.firebase.google.com)
@@ -42,7 +42,7 @@ License agreement on use of Yandex.AppMetrica SDK is available at: [https://yand
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:1.0.0'
+compile 'com.yandex.android:mobmetricapushlib:1.1.0'
 ```
 
 Документация

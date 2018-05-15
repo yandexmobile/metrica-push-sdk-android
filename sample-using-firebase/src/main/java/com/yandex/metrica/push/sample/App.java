@@ -3,6 +3,7 @@ package com.yandex.metrica.push.sample;
 import android.app.Application;
 
 import com.yandex.metrica.YandexMetrica;
+import com.yandex.metrica.YandexMetricaConfig;
 import com.yandex.metrica.push.YandexMetricaPush;
 
 public class App extends Application {
@@ -18,7 +19,8 @@ public class App extends Application {
         super.onCreate();
 
         //YandexMetrica must be activated before using YandexMetricaPush
-        YandexMetrica.activate(this, API_KEY);
+        YandexMetricaConfig.Builder metricaConfig = YandexMetricaConfig.newConfigBuilder(API_KEY);
+        YandexMetrica.activate(this, metricaConfig.build());
         YandexMetrica.enableActivityAutoTracking(this);
 
         YandexMetricaPush.init(this);

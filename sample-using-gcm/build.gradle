@@ -20,7 +20,7 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:25.4.0'
 
-    compile 'com.yandex.android:mobmetricalib:2.80'  //mobmetricapushlib requires >= 2.51 versions
+    compile 'com.yandex.android:mobmetricalib:2.80'  //mobmetricapushlib requires versions from 2.51 to 2.80
     compile ('com.yandex.android:mobmetricapushlib:0.6.1') {
         exclude group: "com.android.support"
     }
