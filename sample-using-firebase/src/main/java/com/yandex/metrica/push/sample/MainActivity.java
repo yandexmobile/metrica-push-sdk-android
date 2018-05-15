@@ -55,12 +55,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        YandexMetrica.onResumeActivity(this);
+        YandexMetrica.resumeSession(this);
     }
 
     @Override
     protected void onPause() {
-        YandexMetrica.onPauseActivity(this);
+        YandexMetrica.pauseSession(this);
         super.onPause();
     }
 }
