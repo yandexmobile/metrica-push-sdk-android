@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId 'com.yandex.metrica.push.sample'
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -18,15 +18,15 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.4.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 
-    compile 'com.yandex.android:mobmetricalib:2.80'  //mobmetricapushlib requires versions from 2.51 to 2.80
-    compile ('com.yandex.android:mobmetricapushlib:0.6.1') {
+    implementation 'com.yandex.android:mobmetricalib:3.6.4'
+    implementation ('com.yandex.android:mobmetricapushlib:0.6.1') {
         exclude group: "com.android.support"
     }
 
     //play services required for push transport
-    compile "com.google.android.gms:play-services-gcm:9.4.0"
+    implementation "com.google.android.gms:play-services-gcm:17.0.0"
 }
 
 apply plugin: 'com.google.gms.google-services'
