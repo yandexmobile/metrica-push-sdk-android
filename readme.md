@@ -14,7 +14,7 @@ Download
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:1.2.0'
+compile 'com.yandex.android:mobmetricapushlib:1.5.0'
 ```
 
 Documentation
@@ -42,7 +42,7 @@ License agreement on use of Yandex.AppMetrica SDK is available at: [https://yand
 --------
 
 ```groovy
-compile 'com.yandex.android:mobmetricapushlib:1.2.0'
+compile 'com.yandex.android:mobmetricapushlib:1.5.0'
 ```
 
 Документация
@@ -55,5 +55,5 @@ compile 'com.yandex.android:mobmetricapushlib:1.2.0'
 Лицензионное соглашение по использованию **Yandex AppMetrica SDK** доступно по следующей ссылке [https://yandex.com/legal/appmetrica_sdk_agreement/][https://yandex.com/legal/appmetrica_sdk_agreement/].
 
 [1]: https://github.com/yandexmobile/metrica-sdk-android
-[2]: https://tech.yandex.com/metrica-mobile-sdk/doc/mobile-sdk-dg/push/android-initialize-docpage/
-[3]: https://tech.yandex.ru/metrica-mobile-sdk/doc/mobile-sdk-dg/push/android-initialize-docpage/
+[2]: https://appmetrica.yandex.com/docs/mobile-sdk-dg/push/android-initialize.html
+[3]: https://appmetrica.yandex.ru/docs/mobile-sdk-dg/push/android-initialize.html

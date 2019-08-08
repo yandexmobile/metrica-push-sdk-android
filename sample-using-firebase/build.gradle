@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.2"
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
 
     defaultConfig {
         applicationId "com.yandex.metrica.push.sample"
-        minSdkVersion 14
-        targetSdkVersion 28
+        minSdkVersion 16
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -19,13 +19,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:28.0.0-rc01'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
 
-    compile 'com.yandex.android:mobmetricalib:3.2.2' //mobmetricapushlib requires >= 3.0.0 versions
-    compile 'com.yandex.android:mobmetricapushlib:1.2.0'
-    compile 'com.google.firebase:firebase-messaging:17.3.0'
-    compile 'com.google.android.gms:play-services-base:15.0.1'
+    implementation 'com.yandex.android:mobmetricalib:3.6.4'
+    implementation 'com.yandex.android:mobmetricapushlib:1.5.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+    implementation 'com.google.android.gms:play-services-base:17.1.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
