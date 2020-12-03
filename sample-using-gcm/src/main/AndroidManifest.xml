@@ -26,7 +26,7 @@
         <receiver android:name=".SilentPushReceiver"
                   android:exported="false">
             <intent-filter>
-                <action android:name="${applicationId}.action.SILENT_PUSH_RECEIVE" />
+                <action android:name="${applicationId}.action.ymp.SILENT_PUSH_RECEIVE" />
             </intent-filter>
         </receiver>
 
